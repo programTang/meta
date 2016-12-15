@@ -3,3 +3,5 @@ gradle
 settings.gradle
 gradlew.bat
 .gradle/
+.idea
+meta.iml
