@@ -46,8 +46,9 @@ public class NumberUtil {
     public static void main(String[] args) {
         long start = System.currentTimeMillis();
 //        System.out.println(radixString(-100,2));
-        System.out.println(Integer.toBinaryString(-5));
-
+        System.out.println(Integer.toString(-5,2));
+        System.out.println(Integer.toUnsignedString(-1,2));
+        System.out.println(Integer.toBinaryString(Integer.MIN_VALUE));
     }
 
 }
