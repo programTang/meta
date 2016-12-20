@@ -12,6 +12,9 @@ public class TestCollection {
         List a = new ArrayList();
         a.add("xixi");
         a.add("haha");
-
+        char[] chars = {'a','b','c','d','e'};
+        System.arraycopy(chars,2,chars,3,2);
+        System.out.println(chars.length);
+        Vector
     }
 }
