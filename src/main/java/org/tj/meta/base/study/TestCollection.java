@@ -24,6 +24,6 @@ public class TestCollection {
         Map<String,String> map = new HashMap();
         map.put("ka","kv");
         System.out.println(map.get("ka"));
-        StringBuffer
+//        System.out.outprintln(DateFormatUtils.formatDate(new Date()));;
     }
 }
