@@ -1,8 +1,8 @@
 package org.tj.meta.base.study;
 
-import com.sun.jmx.remote.internal.ArrayQueue;
-
-import java.util.*;
+import java.io.*;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by liwenliwen on 16/12/19.
@@ -10,7 +10,7 @@ import java.util.*;
  */
 public class TestCollection {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
 //        List a = new ArrayList();
 //        a.add("xixi");
 //        a.add("haha");
@@ -22,8 +22,8 @@ public class TestCollection {
 //        TestCollection testCollection = new TestCollection();
 //        System.out.println(testCollection.hashCode());
         Map<String,String> map = new HashMap();
-        map.put("ka","kv");
+        map.put("ka", "kv");
         System.out.println(map.get("ka"));
-        StringBuffer
+        Writer writer = new OutputStreamWriter(new FileOutputStream(new File("build.gradle")));
     }
 }
