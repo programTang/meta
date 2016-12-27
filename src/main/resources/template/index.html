@@ -1,5 +1,6 @@
 <html>
 <head>
+    <meta charset="utf-8"/>
     <link id="bootstrap_221" rel="stylesheet" type="text/css" class="library" href="//cdn.bootcss.com/bootstrap/2.2.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../static/css/tree.css">
     <script id="jquery_172" type="text/javascript" class="library" src="http://cdn.bootcss.com/jquery/1.8.0/jquery-1.8.0.js"></script>
@@ -7,7 +8,7 @@
 </head>
 <body>
 
-<div class="tree well">
+<div class="tree well" style="display: none">
     <ul>
         <li>
             <span><i ></i> Parent</span> <a href="">Goes somewhere</a>
@@ -76,7 +77,7 @@
         </li>
     </ul>
 </div>
-<div class="tree">
+<div class="tree" style="display: none">
     <ul>
         <li>
             <span><i class="icon-calendar"></i> 2013, Week 2</span>
@@ -146,25 +147,9 @@
 </body>
 <script type="text/javascript" src="../static/js/tree.js"></script>
 <script>
-    var tree = {
-        "id": 1,
-        "name": "顶级目录",
-        "type": "dir",
-        "children": {
-            "id": 2,
-            "name": "二级目录A",
-            "type": "dir",
-            "children": {
-                "id": 3,
-                "name": "三级文件",
-                "type": "file"
-            }
-        }
-    };
-
     $(function () {
         tree_parse(tree,document.getElementById("new_tree"));
-        setTimeout(function(){
+
             $('body .tree li:has(ul)').addClass('parent_li').find(' > span').attr('title', 'Collapse this branch');
             $('body .tree li.parent_li > span').on('click', function (e) {
                 var children = $(this).parent('li.parent_li').find(' > ul > li');
@@ -177,7 +162,6 @@
                 }
                 e.stopPropagation();
             });
-        },3000);
 
     });
 </script>

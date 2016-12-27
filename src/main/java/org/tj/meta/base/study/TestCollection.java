@@ -11,20 +11,33 @@ import java.util.Map;
 public class TestCollection {
 
     public static void main(String[] args) throws FileNotFoundException {
-//        List a = new ArrayList();
-//        a.add("xixi");
-//        a.add("haha");
-//        char[] chars = {'a','b','c','d','e'};
-//        System.arraycopy(chars,2,chars,3,2);
-//        System.out.println(chars.length);
-//        Stack<String> stack = new Stack();
-//        Iterator i = a.iterator();
-//        TestCollection testCollection = new TestCollection();
-//        System.out.println(testCollection.hashCode());
-        Map<String,String> map = new HashMap();
-        map.put("ka", "kv");
-        System.out.println(map.get("ka"));
-        Writer writer = new OutputStreamWriter(new FileOutputStream(new File("build.gradle")));
-//        System.out.outprintln(DateFormatUtils.formatDate(new Date()));;
+        System.out.println(testFinally());
+        System.out.println(testFinallyString());
+    }
+
+    public static int testFinally(){
+        int a = 0;
+        try {
+            a =1;
+            throw new Exception();
+        }catch (Exception e){
+            a = 2;
+            return a;
+        }finally {
+            a = 3;
+        }
+    }
+
+    public static String testFinallyString(){
+        String a ="0";
+        try {
+            a ="1";
+            throw new Exception();
+        }catch (Exception e){
+            a = "2";
+            return a;
+        }finally {
+            a = "3";
+        }
     }
 }
