@@ -25,5 +25,6 @@ public class TestCollection {
         map.put("ka", "kv");
         System.out.println(map.get("ka"));
         Writer writer = new OutputStreamWriter(new FileOutputStream(new File("build.gradle")));
+//        System.out.outprintln(DateFormatUtils.formatDate(new Date()));;
     }
 }
