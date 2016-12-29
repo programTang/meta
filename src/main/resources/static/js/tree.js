@@ -22,11 +22,11 @@ function tree_parse(tree,upper_tree){
 
 var tree = [{
     "id": 1,
-    "name": "顶级目录",
+    "name": "顶级目录s",
     "type": "dir",
     "children": [{
         "id": 2,
-        "name": "二级目录A",
+        "name": "二级目录B",
         "type": "dir",
         "children":[{
             "id": 3,
@@ -46,7 +46,7 @@ var tree = [{
         }]
 },{
     "id": 1,
-    "name": "顶级目录",
+    "name": "A",
     "type": "dir",
     "children": [{
         "id": 2,
@@ -56,9 +56,31 @@ var tree = [{
             "id": 3,
             "name": "三级文件",
             "type": "file"
+        },{
+            "id": 3,
+            "name": "三级文件",
+            "type": "file"
         }]
     },
         {
+            "id": 2,
+            "name": "二级目录A",
+            "type": "dir",
+            "children": [{
+                "id": 3,
+                "name": "三级文件",
+                "type": "file"
+            }]
+        }, {
+            "id": 2,
+            "name": "二级目录A",
+            "type": "dir",
+            "children": [{
+                "id": 3,
+                "name": "三级文件",
+                "type": "file"
+            }]
+        }, {
             "id": 2,
             "name": "二级目录A",
             "type": "dir",

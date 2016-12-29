@@ -24,7 +24,7 @@ public class NIOServer {
     private Selector selector;
 
 
-    public static void main(String[] args) throws IOException {
+    public static void test(String[] args) throws IOException {
         int port = 8888;
         NIOServer nioServer = new NIOServer(port);
         nioServer.listen();

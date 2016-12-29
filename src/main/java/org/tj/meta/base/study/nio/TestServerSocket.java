@@ -16,7 +16,7 @@ public class TestServerSocket {
 
     static int i = 0;
 
-    public static void main(String[] args) throws IOException {
+    public static void test(String[] args) throws IOException {
 //创建Selector
         Selector selector = Selector.open();
 //打开ServerSocketChannel

@@ -60,7 +60,7 @@ public class TestFileChannel {
         channel.close();
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void test() throws IOException {
 //        RandomAccessFile accessFile = new RandomAccessFile("")
 
         File file = new File("src/main/resources/a.txt");

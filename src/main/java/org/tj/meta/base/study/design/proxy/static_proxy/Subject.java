@@ -77,17 +77,17 @@ class ProxySubject implements Subject{
     }
 }
 
-class Test{
-    public static void main(String[] args) {
-        Subject realSubject = new RealSubject("小明");
-        Subject subject = new ProxySubject(realSubject);
-        subject.work();
-        subject.sleep();
-
-        Subject realSubjectB = new RealSubjectB();
-        Subject subject1 = new ProxySubject(realSubjectB);
-        subject1.work();
-        subject1.sleep();
-
-    }
-}
+//class Test{
+//    public static void main(String[] args) {
+//        Subject realSubject = new RealSubject("小明");
+//        Subject subject = new ProxySubject(realSubject);
+//        subject.work();
+//        subject.sleep();
+//
+//        Subject realSubjectB = new RealSubjectB();
+//        Subject subject1 = new ProxySubject(realSubjectB);
+//        subject1.work();
+//        subject1.sleep();
+//
+//    }
+//}

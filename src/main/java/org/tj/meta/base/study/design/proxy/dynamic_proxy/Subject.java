@@ -2,7 +2,6 @@ package org.tj.meta.base.study.design.proxy.dynamic_proxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
-import java.lang.reflect.Proxy;
 
 /**
  * Created by 001 on 16/12/27.
@@ -62,14 +61,14 @@ class MyInvocationHandler implements InvocationHandler{
     }
 }
 
-class TestDynamicProxy{
-    public static void main(String[] args) {
-        Subject subject = new RealSubject("小红");
-        InvocationHandler invocationHandler = new MyInvocationHandler(subject);
-        Subject proxySubject = (Subject) Proxy.newProxyInstance(subject.getClass().getClassLoader(),subject.getClass().getInterfaces(),invocationHandler);
-        proxySubject.work();
-        proxySubject.sleep();
-    }
-}
+//class TestDynamicProxy{
+//    public static void main(String[] args) {
+//        Subject subject = new RealSubject("小红");
+//        InvocationHandler invocationHandler = new MyInvocationHandler(subject);
+//        Subject proxySubject = (Subject) Proxy.newProxyInstance(subject.getClass().getClassLoader(),subject.getClass().getInterfaces(),invocationHandler);
+//        proxySubject.work();
+//        proxySubject.sleep();
+//    }
+//}
 
 

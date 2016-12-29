@@ -21,7 +21,7 @@ public class TestScatterAndGather {
 //        fromFile.getChannel().transferFrom(to)
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void test(String[] args) throws IOException {
         File from = new File("src/main/resources/a.txt");
         File to = new File("src/main/resources/b.txt");
 

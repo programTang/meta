@@ -7,7 +7,7 @@ import java.nio.ByteBuffer;
  */
 public class TestBuffer {
 
-    public static void main(String[] args) {
+    public static void test() {
 
         ByteBuffer byteBuffer = ByteBuffer.allocate(48);
         System.out.println("position:" + byteBuffer.position() + " limit: " + byteBuffer.limit() + " capacity: " + byteBuffer.capacity());;

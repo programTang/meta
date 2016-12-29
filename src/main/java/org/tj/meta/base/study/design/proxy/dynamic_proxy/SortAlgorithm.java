@@ -1,6 +1,5 @@
 package org.tj.meta.base.study.design.proxy.dynamic_proxy;
 
-import java.lang.reflect.Proxy;
 import java.util.Random;
 
 /**
@@ -37,13 +36,13 @@ class SortAlgorithmImpl implements SortAlgorithm{
 
 class TestSort{
 
-    public static void main(String[] args) {
-        SortAlgorithm sortAlgorithm = new SortAlgorithmImpl();
-        SortAlgorithm sortAlgorithmProxy = (SortAlgorithm) Proxy.newProxyInstance(sortAlgorithm.getClass().getClassLoader(),sortAlgorithm.getClass().getInterfaces(),
-                new AlgorithmTimeInvocationHandler(sortAlgorithm));
-        sortAlgorithmProxy.shellSort();
-        sortAlgorithmProxy.straightInsertionSort();
-    }
+//    public static void main(String[] args) {
+//        SortAlgorithm sortAlgorithm = new SortAlgorithmImpl();
+//        SortAlgorithm sortAlgorithmProxy = (SortAlgorithm) Proxy.newProxyInstance(sortAlgorithm.getClass().getClassLoader(),sortAlgorithm.getClass().getInterfaces(),
+//                new AlgorithmTimeInvocationHandler(sortAlgorithm));
+//        sortAlgorithmProxy.shellSort();
+//        sortAlgorithmProxy.straightInsertionSort();
+//    }
 
 
 }

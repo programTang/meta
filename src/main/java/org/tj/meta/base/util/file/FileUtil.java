@@ -39,8 +39,8 @@ public class FileUtil {
     }
 
 
-    public static void main(String[] args) {
-//        listAllFiles(new File("/Users/fahai/Documents/Axure"));
-//        OutputStreamWriter
-    }
+//    public static void main(String[] args) {
+////        listAllFiles(new File("/Users/fahai/Documents/Axure"));
+////        OutputStreamWriter
+//    }
 }
