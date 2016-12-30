@@ -10,13 +10,14 @@ import org.tj.meta.base.study.design.proxy.cglib.AlgorithmCglibProxy;
  * 没那么重要，多核的优势应该发挥出来。
  */
 public class ConcurrencyTest {
-    public static final long count = 10000000000L;
+    public static final long count = 10000000L;
 
     @Test
     public void testSpeed() throws InterruptedException {
         ConcurrencyTest test = (ConcurrencyTest) new AlgorithmCglibProxy().getProxy(ConcurrencyTest.class);
         test.concurrencyAdd();
         test.serialAdd();
+//        Thread
     }
 
     public void concurrencyAdd() throws InterruptedException {
