@@ -119,7 +119,6 @@ public class ExStopThread{
     }
 
 
-
     public static void main(String[] args) {
         ExStopThread exStopThread = new ExStopThread();
         Thread threadA = new Thread(()->{
