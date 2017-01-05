@@ -1,4 +1,4 @@
-package org.tj.meta.base.study.thread.art;
+package org.tj.meta.base.study.java.thread.art;
 
 /**
  * Created by 001 on 16/12/29.

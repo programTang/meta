@@ -1,4 +1,4 @@
-package org.tj.meta.base.study.thread.art;
+package org.tj.meta.base.study.java.thread.art;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package org.tj.meta.base.study.nio;
+package org.tj.meta.base.study.java.nio;
 
 import java.io.File;
 import java.io.IOException;

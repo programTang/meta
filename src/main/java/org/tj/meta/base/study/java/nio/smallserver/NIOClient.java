@@ -1,4 +1,4 @@
-package org.tj.meta.base.study.nio.smallserver;
+package org.tj.meta.base.study.java.nio.smallserver;
 
 /**
  * Created by 001 on 16/12/26.

@@ -24,6 +24,8 @@ public class Sqrt {
 //
 //
     public static double sqrt(int v,double t){
+        if (v<0 || t<=0)
+            throw new IllegalArgumentException();
         return sqrt0(0,v,v,t);
     }
 
@@ -43,8 +45,8 @@ public class Sqrt {
     public static void main(String[] args) {
 //        int v = 9;
 //        double t = 0.000000000000000000000001;
-        int v = 0;
-        double t = 0.21;
+        int v = 9;
+        double t = 0.1;
         System.out.println(Math.sqrt(v) - sqrt(v,t) );
         System.out.println(Math.abs(sqrt(v,t)));
         System.out.println(Math.sqrt(v));
