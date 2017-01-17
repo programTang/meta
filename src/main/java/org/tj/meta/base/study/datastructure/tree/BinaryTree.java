@@ -20,9 +20,23 @@ public class BinaryTree<E> implements Tree<E> {
         this.root = new BinaryNode<>(e);
     }
 
+    /**
+     * 树的深度
+     * @return
+     */
     @Override
     public int depth() {
-        return 0;
+        return depth(root);
+    }
+
+    private int depth(BinaryNode node){
+        if (node == null){
+            return 0;
+        }
+        int leftDepth,rightDepth;
+        leftDepth = depth(node.getLeft())+1;
+        rightDepth = depth(node.getRight())+1;
+        return leftDepth>rightDepth?leftDepth:rightDepth;
     }
 
     @Override
@@ -41,8 +55,7 @@ public class BinaryTree<E> implements Tree<E> {
             root = new BinaryNode<E>(e);
             return true;
         }
-
-        return false;
+        return put(e);
     }
 
     /**
@@ -51,15 +64,15 @@ public class BinaryTree<E> implements Tree<E> {
      * @return
      */
     private boolean put(E e){
-        for (int i=0,j=depth();i<j;i++){
-            Queue<BinaryNode> queue = getTreeNodesByDepth(depth());
+        for (int i=1,j=depth();i<=j;i++){
+            Queue<BinaryNode> queue = getTreeNodesByDepth(i);
             while (!queue.isEmpty()){
                 BinaryNode node = queue.poll();
                 if (node.getLeft() == null){
                     node.setLeft(new BinaryNode(e));
                     return true;
                 }else if (node.getRight() == null){
-                    node.setLeft(new BinaryNode(e));
+                    node.setRight(new BinaryNode(e));
                     return true;
                 }
             }
@@ -93,13 +106,13 @@ public class BinaryTree<E> implements Tree<E> {
         return queue1;
     }
 
-    public Queue preOrder(){
-        
-    }
+//    public Queue preOrder(){
+//
+//    }
 
-    private void preOrder(Queue queue){
-
-    }
+//    private void preOrder(Queue queue){
+//
+//    }
 
     @Override
     public boolean remove(Object object) {
@@ -112,6 +125,13 @@ public class BinaryTree<E> implements Tree<E> {
         binaryTree.add(2);
         binaryTree.add(3);
         binaryTree.add(4);
+        System.out.println(binaryTree.depth());
+//        binaryTree.put(4);
+//        for (int i = 0; i < 10000; i++) {
+//            binaryTree.add(i);
+//        }
+//        System.out.println(binaryTree.depth());
+//        System.out.println(1<<13);
     }
 
 }
