@@ -9,9 +9,11 @@ import java.util.*;
 public class TestCollection {
 
     public static void main(String[] args) {
-        List a = new ArrayList();
-        a.add("xixi");
-        a.add("haha");
-
+//        List a = new ArrayList();
+//        a.add("xixi");
+//        a.add("haha");
+        Map<String,String> map = new HashMap<>();
+        map.put("a","b");
+        System.out.println(map.size());
     }
 }
