@@ -14,14 +14,15 @@ import java.lang.reflect.Method;
 public class AlgorithmCglibProxy implements MethodInterceptor {
 
     public Enhancer enhancer = new Enhancer();
+
     Logger logger = LoggerFactory.getLogger(AlgorithmCglibProxy.class);
+
     public Object getProxy(Class clazz){
         enhancer.setSuperclass(clazz);
         enhancer.setCallback(this);
 //        通过字节码技术创建子类实例
         return enhancer.create();
     }
-
 
     @Override
     public Object intercept(Object obj, Method method, Object[] args, MethodProxy proxy) throws Throwable {
