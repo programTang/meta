@@ -24,4 +24,5 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web:1.4.3.RELEASE")
     testCompile 'junit:junit:4.12'
     compile 'org.junit.jupiter:junit-jupiter-api'
+    compile group: 'org.eclipse.jetty', name: 'jetty-server', version: '9.4.0.v20161208'
 }

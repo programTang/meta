@@ -1,5 +1,7 @@
 package org.tj.meta.base.study.java.thread.practice;
 
+import org.springframework.beans.factory.BeanFactory;
+
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -56,7 +58,6 @@ public class TurnPrintCondition{
         thread2.setName("thread2");
         Thread thread3 = new Thread(turnPrintCondition.new PrintThread(3));
         thread3.setName("thread3");
-
         thread1.start();
         thread2.start();
         thread3.start();

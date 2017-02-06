@@ -7,7 +7,6 @@ import java.util.List;
  * Created by 001 on 16/12/30.
  * wait 执行后立即释放锁 程序进入休眠状态
  * 值得注意的是执行 notify 后，线程并不会立即释放锁，而是要等到推出 synchronized 后才释放锁或者自己主动释放锁(wait())
- *
  */
 public class ExWaitNotify {
     List<Object> products;

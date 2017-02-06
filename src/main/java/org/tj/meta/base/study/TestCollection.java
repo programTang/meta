@@ -1,10 +1,14 @@
 package org.tj.meta.base.study;
 
+<<<<<<< HEAD
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 import java.nio.file.FileSystem;
 import java.util.TreeMap;
 import java.util.WeakHashMap;
+=======
+import java.util.*;
+>>>>>>> 03f2a9ea151aff7d7acd2a4a18a1ce227ab3b36c
 
 /**
  * Created by liwenliwen on 16/12/19.
@@ -28,6 +32,7 @@ public class TestCollection {
         System.out.println("k:="+k);  // 0
     }
 
+<<<<<<< HEAD
     public static int testFinally(){
         int a = 0;
         try {
@@ -52,5 +57,14 @@ public class TestCollection {
         }finally {
             a = "3";
         }
+=======
+    public static void main(String[] args) {
+//        List a = new ArrayList();
+//        a.add("xixi");
+//        a.add("haha");
+        Map<String,String> map = new HashMap<>();
+        map.put("a","b");
+        System.out.println(map.size());
+>>>>>>> 03f2a9ea151aff7d7acd2a4a18a1ce227ab3b36c
     }
 }

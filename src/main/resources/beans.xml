@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="hand" name="hand" class="org.tj.meta.base.study.spring.entities.Hand">
+        <constructor-arg name="left" value="左手"/>
+        <constructor-arg name="right" value="右手"/>
+    </bean>
+
+    <bean name="person" class="org.tj.meta.base.study.spring.entities.Person">
+        <property name="hand" ref="hand"/>
+        <property name="name" value="tangjia"/>
+    </bean>
+</beans>
