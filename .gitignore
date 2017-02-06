@@ -3,3 +3,4 @@ gradle
 settings.gradle
 gradlew.bat
 .gradle/
+.idea/
