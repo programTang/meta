@@ -1,0 +1,168 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <link id="bootstrap_221" rel="stylesheet" type="text/css" class="library" href="//cdn.bootcss.com/bootstrap/2.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/tree.css">
+    <script id="jquery_172" type="text/javascript" class="library" src="http://cdn.bootcss.com/jquery/1.8.0/jquery-1.8.0.js"></script>
+    <script id="bootstrap_221_1" type="text/javascript" class="library" src="//cdn.bootcss.com/bootstrap/2.2.1/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="tree well" style="display: none">
+    <ul>
+        <li>
+            <span><i ></i> Parent</span> <a href="">Goes somewhere</a>
+            <ul>
+                <li>
+                    <span><i class="icon-plus-sign"></i> Child</span> <a href="">Goes somewhere</a>
+                    <ul>
+                        <li style="display:none;">
+                            <span><i class="icon-leaf"></i> Grand Child</span> <a href="">Goes somewhere</a>
+                        </li>
+                        <li style="display:none;">
+                            <span><i class="icon-plus-sign"></i> Grand Child</span> <a href="">Goes somewhere</a>
+                            <ul>
+                                <li style="display:none;">
+                                    <span><i class="icon-leaf"></i> Grand Child</span> <a href="">Goes somewhere</a>
+                                </li>
+                                <li style="display:none;">
+                                    <span><i class="icon-leaf"></i> Grand Child</span> <a href="">Goes somewhere</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span><i class="icon-plus-sign"></i> Child</span> <a href="">Goes somewhere</a>
+                    <ul>
+                        <li style="display:none;">
+                            <span><i class="icon-leaf"></i> Grand Child1</span> <a href="">Goes somewhere</a>
+                        </li>
+                        <li style="display:none;">
+                            <span><i class="icon-minus-sign"></i> Grand Child</span> <a href="">Goes somewhere</a>
+                            <ul>
+                                <li>
+                                    <span><i class="icon-minus-sign"></i> Great Grand Child</span> <a href="">Goes somewhere</a>
+                                    <ul>
+                                        <li>
+                                            <span><i class="icon-leaf"></i> Great great Grand Child</span> <a href="">Goes somewhere</a>
+                                        </li>
+                                        <li>
+                                            <span><i class="icon-leaf"></i> Great great Grand Child</span> <a href="">Goes somewhere</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span><i class="icon-leaf"></i> Great Grand Child</span> <a href="">Goes somewhere</a>
+                                </li>
+                                <li>
+                                    <span><i class="icon-leaf"></i> Great Grand Child</span> <a href="">Goes somewhere</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li style="display:none;">
+                            <span><i class="icon-leaf"></i> Grand Child</span> <a href="">Goes somewhere</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <span><i class="icon-folder-open"></i> Parent2</span> <a href="">Goes somewhere</a>
+            <ul>
+                <li>
+                    <span><i class="icon-leaf"></i> Child</span> <a href="">Goes somewhere</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class="tree" style="display: none">
+    <ul>
+        <li>
+            <span><i class="icon-calendar"></i> 2013, Week 2</span>
+            <ul>
+                <li>
+                    <span class="badge badge-success"><i class="icon-minus-sign"></i> Monday, January 7: 8.00 hours</span>
+                    <ul>
+                        <li>
+                            <a href=""><span><i class="icon-time"></i> 8.00</span> – Changed CSS to accomodate...</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="badge badge-success"><i class="icon-minus-sign"></i> Tuesday, January 8: 8.00 hours</span>
+                    <ul>
+                        <li>
+                            <span><i class="icon-time"></i> 6.00</span> – <a href="">Altered code...</a>
+                        </li>
+                        <li>
+                            <span><i class="icon-time"></i> 2.00</span> – <a href="">Simplified our approach to...</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="badge badge-warning"><i class="icon-minus-sign"></i> Wednesday, January 9: 6.00 hours</span>
+                    <ul>
+                        <li>
+                            <a href=""><span><i class="icon-time"></i> 3.00</span> – Fixed bug caused by...</a>
+                        </li>
+                        <li>
+                            <a href=""><span><i class="icon-time"></i> 3.00</span> – Comitting latest code to Git...</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="badge badge-important"><i class="icon-minus-sign"></i> Wednesday, January 9: 4.00 hours</span>
+                    <ul>
+                        <li>
+                            <a href=""><span><i class="icon-time"></i> 2.00</span> – Create component that...</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <span><i class="icon-calendar"></i> 2013, Week 3</span>
+            <ul>
+                <li>
+                    <span class="badge badge-success"><i class="icon-minus-sign"></i> Monday, January 14: 8.00 hours</span>
+                    <ul>
+                        <li>
+                            <span><i class="icon-time"></i> 7.75</span> – <a href="">Writing documentation...</a>
+                        </li>
+                        <li>
+                            <span><i class="icon-time"></i> 0.25</span> – <a href="">Reverting code back to...</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="tree" id="new_tree">
+
+</div>
+</body>
+<script type="text/javascript" src="../static/js/tree.js?_=XX"></script>
+<script>
+    $(function () {
+        tree_parse(tree,document.getElementById("new_tree"));
+
+            $('body .tree li:has(ul)').addClass('parent_li').find(' > span').attr('title', 'Collapse this branch');
+            $('body .tree li.parent_li > span').on('click', function (e) {
+                var children = $(this).parent('li.parent_li').find(' > ul > li');
+                if (children.is(":visible")) {
+                    children.hide('fast');
+                    $(this).attr('title', 'Expand this branch').find(' > i').addClass('icon-plus-sign').removeClass('icon-minus-sign');
+                } else {
+                    children.show('fast');
+                    $(this).attr('title', 'Collapse this branch').find(' > i').addClass('icon-minus-sign').removeClass('icon-plus-sign');
+                }
+                e.stopPropagation();
+            });
+
+    });
+</script>
+</html>
