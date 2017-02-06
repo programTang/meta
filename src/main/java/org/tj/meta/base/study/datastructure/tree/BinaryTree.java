@@ -93,13 +93,13 @@ public class BinaryTree<E> implements Tree<E> {
         return queue1;
     }
 
-    public Queue preOrder(){
-        
-    }
-
-    private void preOrder(Queue queue){
-
-    }
+//    public Queue preOrder(){
+//
+//    }
+//
+//    private void preOrder(Queue queue){
+//
+//    }
 
     @Override
     public boolean remove(Object object) {

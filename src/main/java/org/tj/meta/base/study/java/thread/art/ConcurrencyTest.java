@@ -3,6 +3,8 @@ package org.tj.meta.base.study.java.thread.art;
 import org.junit.Test;
 import org.tj.meta.base.study.design.proxy.cglib.AlgorithmCglibProxy;
 
+import java.util.HashMap;
+
 /**
  * Created by 001 on 16/12/29.
  * 当累加操作越小的时候，尤其是1w 并行所花的时间几乎是串行的100倍，这是因为线程有创建和上下文切换的开销,而这些开销比累加计算开销大得多
