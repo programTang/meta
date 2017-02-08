@@ -15,5 +15,6 @@ public class TestCollection {
         Map<String,String> map = new HashMap<>();
         map.put("a","b");
         System.out.println(map.size());
+        new Random()
     }
 }
