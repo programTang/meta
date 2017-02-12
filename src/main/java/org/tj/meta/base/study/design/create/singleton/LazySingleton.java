@@ -8,7 +8,7 @@ import java.util.Set;
  */
 public class LazySingleton {
 
-    private static LazySingleton instance = null;
+    private static  LazySingleton instance = null;
 
     private LazySingleton(){
         try {
@@ -78,6 +78,10 @@ public class LazySingleton {
         }
         System.out.println(System.currentTimeMillis() - start_time);
         System.out.println(lazySingletons.size());
+        int i=0;
+        for (Object lazySingleton:lazySingletons){
+            System.out.println((i++)+" "+lazySingleton);
+        }
 
 
     }

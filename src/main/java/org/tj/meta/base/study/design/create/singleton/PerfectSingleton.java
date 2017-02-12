@@ -15,13 +15,13 @@ public class PerfectSingleton {
     }
 
     /* 此处使用一个内部类来维护单例 */
-    private static class SingletonFactory{
+    private static class SingletonHolder{
         private static PerfectSingleton instance = new PerfectSingleton();
     }
 
     /* 获取实例 */
     public static PerfectSingleton  getInstance(){
-        return SingletonFactory.instance;
+        return SingletonHolder.instance;
     }
 
     public Object readResolve() {
