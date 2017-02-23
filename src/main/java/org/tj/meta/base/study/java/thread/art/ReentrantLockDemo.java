@@ -53,8 +53,8 @@ public class ReentrantLockDemo{
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-//                reentrantLock2.unlock();
-//                System.out.println("线程2 释放 lock2");
+                reentrantLock2.unlock();
+                System.out.println("线程2 释放 lock2");
                 try {
                     System.out.println("线程2 等待获取 lock1");
                     reentrantLock1.lockInterruptibly();

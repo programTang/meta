@@ -30,7 +30,7 @@ public class TurnPrintThread{
                        }
                        state.set(nama%3 + 1);
                    }
-                   state.notify();
+                   state.notify()  ;
                    try {
                        state.wait();
                    } catch (InterruptedException e) {
