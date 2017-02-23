@@ -1,6 +1,7 @@
 package org.tj.meta.base.study.java.nio;
 
-import sun.tools.java.ClassPath;
+
+import com.sun.org.apache.bcel.internal.util.ClassPath;
 
 /**
  * Created by 001 on 16/12/23.
