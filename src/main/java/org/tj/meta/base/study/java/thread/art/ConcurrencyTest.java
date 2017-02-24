@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 package org.tj.meta.base.study.java.thread.art;
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 import org.tj.meta.base.study.design.proxy.cglib.AlgorithmCglibProxy;
-
-import java.util.HashMap;
 
 /**
  * Created by 001 on 16/12/29.
@@ -50,7 +47,6 @@ public class ConcurrencyTest {
         }
     }
 }
-=======
 //package org.tj.meta.base.study.java.thread.art;
 //
 //import org.junit.Test;
@@ -100,4 +96,3 @@ public class ConcurrencyTest {
 //        }
 //    }
 //}
->>>>>>> 03f2a9ea151aff7d7acd2a4a18a1ce227ab3b36c

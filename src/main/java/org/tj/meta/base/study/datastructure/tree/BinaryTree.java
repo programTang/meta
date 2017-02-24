@@ -109,11 +109,8 @@ public class BinaryTree<E> implements Tree<E> {
 //    public Queue preOrder(){
 //
 //    }
-<<<<<<< HEAD
 //
-=======
 
->>>>>>> 03f2a9ea151aff7d7acd2a4a18a1ce227ab3b36c
 //    private void preOrder(Queue queue){
 //
 //    }
