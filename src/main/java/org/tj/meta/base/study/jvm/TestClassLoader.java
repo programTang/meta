@@ -6,7 +6,7 @@ package org.tj.meta.base.study.jvm;
 public class TestClassLoader {
 
     public static void main(String[] args) {
-        System.out.println(Object.class.getClassLoader());
-        System.out.println(TestClassLoader.class.getClassLoader());
+        int a = 1;
+        System.out.println(1);
     }
 }

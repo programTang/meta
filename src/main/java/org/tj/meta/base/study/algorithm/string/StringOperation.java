@@ -1,7 +1,5 @@
 package org.tj.meta.base.study.algorithm.string;
 
-import org.springframework.util.Assert;
-
 /**
  * Created by 001 on 17/1/23.
  * 对字符串的处理算法
@@ -14,7 +12,7 @@ public class StringOperation {
      * @return
      */
     public static int string2Int(String str){
-        Assert.notNull(str);
+//        Assert.notNull(str);
         int sum = 0;
         int position = str.length();
         boolean isNegative = false;

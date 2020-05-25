@@ -4,11 +4,13 @@ package org.tj.meta.base.study.java.thread.art;
  * Created by 001 on 16/12/30.
  * 对于Synchronized关键字修饰静态方法，实例方法，代码块还是什么，另一个线程对这些代码的访问情况
  * 其实只要明白了对象锁和类锁就全都明白了。
- * 当一个线程获取了对象锁以后，所有尝试获取该对象的锁都是阻塞等待，普通方法不会受影响，因为他不需要获得锁就能执行，synchronized修饰的静态方法也不受影响，因为他只需要获得类锁就可以了。
+ * 当一个线程获取了对象锁以后，所有尝试获取该对象的锁都是阻塞等待，普通方法不会受影响，因为他不需要获得锁就能执行，
+ * synchronized修饰的静态方法也不受影响，因为他只需要获得类锁就可以了。
  * 当获得的是类级别的锁时，其他尝试获取该类的类锁的都会被阻塞（就是synchronized修饰的静态方法）.
  */
 public class ExSynchronized {
 
+    //共享变量
     Object object = new Object();
 
     public static void main(String[] args) {
@@ -76,22 +78,27 @@ public class ExSynchronized {
 }
 
 class ThreadA extends Thread{
+
     ExSynchronized exSynchronized;
+
     public ThreadA(ExSynchronized exSynchronized){
         this.exSynchronized = exSynchronized;
     }
     @Override
     public void run() {
-//        exSynchronized.test1();
-        exSynchronized.test4();
+        exSynchronized.test1();
+//        exSynchronized.test4();
     }
 }
 
 class ThreadB extends Thread{
+
     ExSynchronized exSynchronized;
+
     public ThreadB(ExSynchronized exSynchronized){
         this.exSynchronized = exSynchronized;
     }
+
     @Override
     public void run() {
         exSynchronized.test2();

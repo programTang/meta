@@ -1,6 +1,9 @@
 package org.tj.meta.base.util.file;
 
+import com.itextpdf.html2pdf.HtmlConverter;
+
 import java.io.File;
+import java.io.IOException;
 
 /**
  * Created by 001 on 16/12/22.
@@ -39,8 +42,26 @@ public class FileUtil {
     }
 
 
-//    public static void main(String[] args) {
-////        listAllFiles(new File("/Users/fahai/Documents/Axure"));
-////        OutputStreamWriter
-//    }
+    public static void main(String[] args) throws IOException {
+
+//        boolean success =
+//        System.out.println("".charAt(0));
+//        File file = new File("/Users/Jia/Downloads/index.html");
+//        System.out.println(file.isDirectory());
+//        HtmlConverter.convertToPdf(
+//                file,
+//                new File("/Users/Jia/Downloads/test.pdf"));
+
+
+
+        long n = 8;
+        long sum = 0;
+        long max = n/5;
+
+        System.out.println(max);
+        for (long j = 0; j< max; j++ ){
+            sum += Math.pow(2, j);
+        }
+        System.out.println(sum);
+    }
 }

@@ -18,10 +18,11 @@ public class CastTest {
 
     public static void main(String[] args) {
         CastTest castTest = new CastSon1();
-        CastSon castSon = (CastSon) castTest;
+        System.out.println(castTest instanceof  CastSon);
+        CastSon1 castSon1 = (CastSon1) castTest;
 
-        CastTest castTest1 = new CastTest();
-        CastSon castSon1 = (CastSon) castTest1;
+//        CastTest castTest1 = new CastTest();
+//        CastSon castSon1 = (CastSon) castTest1;
 
 
     }

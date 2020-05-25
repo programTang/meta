@@ -1,8 +1,5 @@
 package org.tj.meta.base.study.java.nio;
 
-
-import com.sun.org.apache.bcel.internal.util.ClassPath;
-
 /**
  * Created by 001 on 16/12/23.
  */
@@ -10,7 +7,6 @@ public class TestBuffer {
 
     public static void test() {
 
-        System.out.println(new ClassPath().toString());
 //        ByteBuffer byteBuffer = ByteBuffer.allocate(48);
 //        System.out.println("position:" + byteBuffer.position() + " limit: " + byteBuffer.limit() + " capacity: " + byteBuffer.capacity());;
 //
