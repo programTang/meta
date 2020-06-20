@@ -63,6 +63,7 @@ class MyInvocationHandler implements InvocationHandler{
 }
 
 class TestDynamicProxy{
+
     public static void main(String[] args) {
         Subject subject = new RealSubject("小红");
         InvocationHandler invocationHandler = new MyInvocationHandler(subject);

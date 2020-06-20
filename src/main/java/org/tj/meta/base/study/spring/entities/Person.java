@@ -1,7 +1,11 @@
 package org.tj.meta.base.study.spring.entities;
 
+import org.springframework.beans.factory.annotation.Lookup;
+
+import javax.annotation.Resource;
+
 /**
- * Created by 001 on 17/1/12.
+ * Created by 001 on 17/1/12.`
  */
 public class Person {
 
@@ -13,6 +17,7 @@ public class Person {
         this.name = name;
     }
 
+    @Lookup
     public String getName() {
         return name;
     }

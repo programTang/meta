@@ -18,17 +18,34 @@ public class ArraySort {
         if (array == null){
             return array;
         }
-        for (int i = 1;i < array.length; i++) {
-            for (int j = 0; j < i; j++) {
-                if (array[i]<array[j]){
-                    int t = array[i];
-                    for (int k = i; k > j; k--) {
-                        array[k] = array[k-1];
-                    }
-                    array[j] = t;
-                    continue;
+        //从后往前的比较
+        for (int i = 0;i < array.length-1; i++) {
+            //未排序数组的第一位为 j
+            int j = i + 1;
+            int value = array[j];
+            //从后往前比较
+            for ( ; j>0 && j < array.length; j--){
+                //跟有序数组比较，如果小于的话，有序数组往后移一位
+                if (array[j-1] > value){
+                    array[j] = array[j-1];
+                }else {
+                    break;
                 }
             }
+            array[j] =value;
+            System.out.print("第"+ i +"轮插入排序后：");
+            printArray(array);
+// 从前往后的比较
+//            for (int j = 0; j < i; j++) {
+//                if (array[i]<array[j]){
+//                    int t = array[i];
+//                    for (int k = i; k > j; k--) {
+//                        array[k] = array[k-1];
+//                    }
+//                    array[j] = t;
+//                    continue;
+//                }
+//            }
         }
         return array;
     }
@@ -70,20 +87,36 @@ public class ArraySort {
         if (left>=right){
             return;
         }
-        int baseValue = array[left];
-        int baseIndex = left;
-        while (left<right){
-            while (array[right] >= baseValue && left < right)
-                right--;
-            while (array[left] <= baseValue && left < right)
-                left++;
-            swap(array,left,right);
-        }
+//        int baseValue = array[left];
+//        int baseIndex = left;
+//        while (left<right+1){
+//            while (array[right] >= baseValue && left < right)
+//                right--;
+//            while (array[left] <= baseValue && left < right)
+//                left++;
+//            swap(array,left,right);
+//        }
 //        swap(array,baseIndex,left);
-        array[baseIndex] = array[left];
-        array[left] = baseValue;
-        quickSort1(array,baseIndex,left);
-        quickSort1(array,left+1,right);
+//        array[baseIndex] = array[left];
+//        array[left] = baseValue;
+        int pivot = partition(array, left, right);
+        System.out.println("left:"+ left + " pivot:" + pivot + " right:"+ right);
+        quickSort1(array,left,pivot-1);
+        quickSort1(array,pivot+1,right);
+    }
+
+    public static int partition(int[] array, int left, int right){
+        int pivot = right;
+        int value = array[pivot];
+        int i = left,j = left;
+        for (; j <= pivot; j++){
+            if (array[j] < value){
+                swap(array, i, j);
+                i++;
+            }
+        }
+        swap(array, i, pivot);
+        return pivot;
     }
 
 //    public static void quickSort1(int[] array,int start,int end){
@@ -119,15 +152,31 @@ public class ArraySort {
      */
     public static int[] bubbleSort(int[] array){
         if (array == null){
-            return array;
+            return null;
         }
-        for (int i = 0; i < array.length-1; i++) {
-            for (int j = array.length-1; j > i; j--) {
-                if (array[j]<array[j-1]){
-                    swap(array,i,j);
+        boolean exchange = false;
+        for (int i = 1; i < array.length; i++) {
+            for (int j = 0; j < array.length -i; j++) {
+                if (array[j] > array[j+1]){
+                    swap(array, j, j+1);
+                    exchange = true;
                 }
             }
+            if (!exchange){
+                //如果没有发生交换，提前结束
+                break;
+            }
+            System.out.print("第"+ i +"轮交换后：");
+            printArray(array);
         }
+
+//        for (int i = 0; i < array.length-1; i++) {
+//            for (int j = array.length-1; j > i; j--) {
+//                if (array[j]<array[j-1]){
+//                    swap(array,i,j);
+//                }
+//            }
+//        }
         return array;
     }
 
@@ -190,12 +239,17 @@ public class ArraySort {
         return array;
     }
 
+    static int count = 0;
     public static void mergeSort1(int[] array,int left,int right){
+
         int mid = (left+right)/2;
+//        System.out.println(mid);
         if (left<right){
             mergeSort1(array,left,mid);
             mergeSort1(array,mid+1,right);
             mergeArray(array,left,right);
+            System.out.print("第"+ count++ +"轮交换后：");
+            printArray(array);
         }
     }
 
@@ -249,13 +303,15 @@ public class ArraySort {
 
     public static void main(String[] args) {
         int[] array = RandomUtil.randomIntArray(100,10);
+//        int[] array = {18, 25,  44,  48,  51,  58,  61,  68,  85,  85  };
         printArray(array);
-//        int[] array1 = {43,  74,  72,  9,  10,  43 , 93 , 15  ,36  ,0 };
+
 //        bubbleSort(array);
 //        printArray(countSort(array));
-        printArray(mergeSort(array));
-        printArray(array);
-//        printArray(straightInsertionSort(array));
+//        printArray(mergeSort(array));
+        printArray(quickSort(array));
 //        printArray(array);
+//        printArray(straightInsertionSort(array));
+        printArray(array);
     }
 }

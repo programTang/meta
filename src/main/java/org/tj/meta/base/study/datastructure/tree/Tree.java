@@ -6,6 +6,7 @@ package org.tj.meta.base.study.datastructure.tree;
 public interface Tree<E>{
 
     /**
+     * 树的高度
      * @return int the depth of tree;
      */
     int depth();

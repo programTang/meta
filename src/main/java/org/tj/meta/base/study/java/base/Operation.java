@@ -9,19 +9,48 @@ public class Operation {
         Integer n1 = new Integer(20);
         Integer n2 = new Integer(20);
         int n3 = 20;
-        int n4 = new Integer(20);
+        int n4 = new Integer(20); //自动拆包 基本类型
 
-        Integer n5 = 20;
+        Integer n5 = 20; //自动包装  调用 Integer.value() 从缓存池拿。
         Integer n6 = 20;
 
+        Integer n7 = 129;
+        Integer n9 = 129;
+        Integer n8 = new Integer(129);
+
         System.out.println(n1 == n2); // false 指向堆里不同的两个对象
-        System.out.println(n1 == n3);
-        System.out.println(n1 == n4);
-        System.out.println(n3 == n4);
+        System.out.println(n1 == n3); // true 自动拆包
+        System.out.println(n1 == n4); // true 自动拆包
+        System.out.println(n3 == n4); // true n4发生自动拆箱
         System.out.println(n1 == n5); // false
-        System.out.println(n3 == n5);
-        System.out.println(n5 == n6);// true 自动包装 享元
+        System.out.println(n3 == n5); // true 自动拆包
+        System.out.println(n5 == n6); // true value of  true 自动包装 享元
+        System.out.println(n2 == n6); // false
+        System.out.println(n7 == n8); // false
+        System.out.println(n7 == n9); // false
+
     }
+
+    public static void testInteger500(){
+        Integer n1 = new Integer(500);
+        Integer n2 = new Integer(500);
+        int n3 = 500;
+        int n4 = new Integer(500);
+
+        Integer n5 = 500;
+        Integer n6 = 500;
+
+        System.out.println(n1 == n2); // false 指向堆里不同的两个对象
+        System.out.println(n1 == n3); // false
+        System.out.println(n1 == n4); // false
+        System.out.println(n3 == n4); // true n4发生自动拆箱
+        System.out.println(n1 == n5); // false
+        System.out.println(n3 == n5); // true
+        System.out.println(n5 == n6); // true value of  true 自动包装 享元
+
+    }
+
+
 
     public static void testHex(){
         int a = 0x1f;
@@ -77,6 +106,8 @@ public class Operation {
 
 
     public static void main(String[] args) {
-        testBreak();
+        testInteger();
+        System.out.println("------");
+        testInteger500();
     }
 }

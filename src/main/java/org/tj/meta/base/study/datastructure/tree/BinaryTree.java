@@ -127,11 +127,11 @@ public class BinaryTree<E> implements Tree<E> {
         binaryTree.add(3);
         binaryTree.add(4);
         System.out.println(binaryTree.depth());
-//        binaryTree.put(4);
-//        for (int i = 0; i < 10000; i++) {
-//            binaryTree.add(i);
-//        }
-//        System.out.println(binaryTree.depth());
+        binaryTree.put(4);
+        for (int i = 0; i < 10000; i++) {
+            binaryTree.add(i);
+        }
+        System.out.println(binaryTree.depth());
 //        System.out.println(1<<13);
     }
 
